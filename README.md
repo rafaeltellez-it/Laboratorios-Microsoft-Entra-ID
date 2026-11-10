@@ -18,7 +18,7 @@ Este repositorio documenta mi **laboratorio práctico empresarial (Homelab)** en
 
 | # Ticket | Escenario / Incidencia | Herramienta en Entra ID | Prioridad / SLA | Estado |
 | :--- | :--- | :--- | :--- | :--- |
-| **INC-001** | Incorporación masiva de empleados y asignación de grupos por departamento | Usuarios / Grupos Dinámicos / CSV | Media (4 hrs) | 🔄 En proceso |
+| **INC-001** | Incorporación masiva de empleados y asignación de grupos por departamento | Usuarios / Grupos Dinámicos / CSV | Media (4 hrs) | ✅ Resuelto |
 | **INC-002** | Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR) | Password Reset / Authentication Methods | Alta (1 hr) | ⏳ Pendiente |
 | **REQ-003** | Exigir MFA obligatorio al área de Finanzas y bloquear accesos fuera del país | Conditional Access / Named Locations | Alta (2 hrs) | ⏳ Pendiente |
 | **INC-004** | Diagnóstico de error de inicio de sesión mediante registros de auditoría | Sign-in Logs / Troubleshooting | Crítica (30 min) | ⏳ Pendiente |
@@ -39,7 +39,10 @@ RRHH solicita dar de alta a nuevos ingresos del área de Ventas y Soporte Técni
 2. **Creación de Grupo Dinámico:** Se creó el grupo de seguridad `GRP-Departamento-Ventas` configurando el tipo de membresía en **Usuario Dinámico**.
 3. **Regla de Membresía Dinámica:** Se configuró la expresión `(user.department -eq "Ventas")` para automatizar la asignación.
 
-*(Próximamente: Evidencia gráfica de configuración en Microsoft Entra ID)*
+<img width="1913" height="806" alt="usuario-carlos" src="https://github.com/user-attachments/assets/09f0cc63-ac6f-48e3-b0d7-2374332c2760" />
+
+<img width="1920" height="921" alt="grupo-ventas" src="https://github.com/user-attachments/assets/d1150c5a-88e8-4101-953c-f3aa79318f1c" />
+
 
 ### 3. Verificación y Pruebas
 * Se validó en la pestaña **Bulk operation results** que los usuarios fueron creados sin errores (100% completado).
