@@ -19,7 +19,7 @@ Este repositorio documenta mi **laboratorio práctico empresarial (Homelab)** en
 | # Ticket | Escenario / Incidencia | Herramienta en Entra ID | Prioridad / SLA | Estado |
 | :--- | :--- | :--- | :--- | :--- |
 | **INC-001** | Incorporación masiva de empleados y asignación de grupos por departamento | Usuarios / Grupos Dinámicos / CSV | Media (4 hrs) | ✅ Resuelto |
-| **INC-002** | Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR) | Password Reset / Authentication Methods | Alta (1 hr) | ⏳ Pendiente |
+| **INC-002** | Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR) | Password Reset / Authentication Methods | Alta (1 hr) | ✅ Resuelto |
 | **REQ-003** | Exigir MFA obligatorio al área de Finanzas y bloquear accesos fuera del país | Conditional Access / Named Locations | Alta (2 hrs) | ⏳ Pendiente |
 | **INC-004** | Diagnóstico de error de inicio de sesión mediante registros de auditoría | Sign-in Logs / Troubleshooting | Crítica (30 min) | ⏳ Pendiente |
 
@@ -50,3 +50,34 @@ RRHH solicita dar de alta a nuevos ingresos del área de Ventas y Soporte Técni
 
 ### 4. Respuesta de Cierre del Ticket (Notificación al Usuario)
 > "Estimado equipo de RRHH: Se han creado las cuentas corporativas solicitadas y se ha configurado la asignación automática de permisos para el departamento de Ventas. Adjunto el listado de usuarios temporales. Quedo atento a cualquier consulta adicional. Ticket resuelto dentro del SLA."
+
+
+---
+
+## 🎫 Ticket INC-002: Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR)
+
+* **Solicitante:** Mesa de Ayuda / Seguridad TI
+* **Prioridad:** Alta (SLA: 1 hora)
+* **Categoría:** Gestión de Accesos - Microsoft Entra ID
+
+### 1. Descripción del Problema / Requerimiento
+El usuario de prueba **Carlos Gómez** reporta un bloqueo de seguridad en su cuenta corporativa (`carlos.gomez@rafaeltellezitoutlook.onmicrosoft.com`) debido a múltiples intentos fallidos de inicio de sesión, requiriendo intervención del administrador para restablecer el acceso y validar el autoservicio de contraseñas (SSPR).
+
+### 2. Procedimiento Técnico Ejecutado
+1. **Simulación del Bloqueo:** Se intentó iniciar sesión con credenciales incorrectas de forma deliberada hasta activar la política de seguridad automatizada de [Microsoft Entra ID](https://github.com/copilot), generando el bloqueo temporal por motivos de seguridad.
+2. **Acceso al Panel de Administración:** Se ingresó al [Portal de Azure](https://github.com/copilot) con permisos de administrador de identidades.
+3. **Gestión de Credenciales y SSPR:** Se localizó al usuario en la sección **Usuarios** > **Todos los usuarios** y se ejecutó la opción de **Restablecer contraseña** para limpiar el bloqueo de seguridad, estableciendo una credencial temporal. Asimismo, se revisó el apartado de **Restablecimiento de contraseña** para configurar la directiva de autoservicio.
+
+### 3. Verificación y Evidencias Gráficas
+* **Mensaje de cuenta bloqueada en el portal de autenticación:**
+ <img width="1388" height="805" alt="Captura de pantalla 2026-11-13 210634" src="https://github.com/user-attachments/assets/090c6b39-7d6e-4b68-9244-e0ec5455273f" />
+
+* **Restablecimiento y desbloqueo exitoso en el panel de Entra ID:**
+  <img width="1910" height="857" alt="Captura de pantalla 2026-11-13 211629" src="https://github.com/user-attachments/assets/7f577471-581f-4826-b9ee-50415b2b9b7c" />
+
+* **Configuración del Autoservicio de Restablecimiento de Contraseña (SSPR):**
+  <img width="1886" height="856" alt="Captura de pantalla 2026-11-13 212838" src="https://github.com/user-attachments/assets/1f62ce3b-5e3e-4e67-895c-93ea1999a978" />
+
+
+### 4. Respuesta de Cierre del Ticket
+"Estimado equipo: El incidente de bloqueo de cuenta para el usuario Carlos Gómez ha sido resuelto de manera exitosa. Se aplicó el restablecimiento de credenciales en Microsoft Entra ID, retirando la restricción de seguridad y validando las directivas de SSPR. Ticket cerrado dentro del SLA."
