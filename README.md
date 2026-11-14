@@ -20,7 +20,7 @@ Este repositorio documenta mi **laboratorio práctico empresarial (Homelab)** en
 | :--- | :--- | :--- | :--- | :--- |
 | **INC-001** | Incorporación masiva de empleados y asignación de grupos por departamento | Usuarios / Grupos Dinámicos / CSV | Media (4 hrs) | ✅ Resuelto |
 | **INC-002** | Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR) | Password Reset / Authentication Methods | Alta (1 hr) | ✅ Resuelto |
-| **REQ-003** | Exigir MFA obligatorio al área de Finanzas y bloquear accesos fuera del país | Conditional Access / Named Locations | Alta (2 hrs) | ⏳ Pendiente |
+| **REQ-003** | Exigir MFA obligatorio al área de Finanzas y bloquear accesos fuera del país | Conditional Access / Named Locations | Alta (2 hrs) | ✅ Resuelto |
 | **INC-004** | Diagnóstico de error de inicio de sesión mediante registros de auditoría | Sign-in Logs / Troubleshooting | Crítica (30 min) | ⏳ Pendiente |
 
 ---
@@ -81,3 +81,28 @@ El usuario de prueba **Carlos Gómez** reporta un bloqueo de seguridad en su cue
 
 ### 4. Respuesta de Cierre del Ticket
 "Estimado equipo: El incidente de bloqueo de cuenta para el usuario Carlos Gómez ha sido resuelto de manera exitosa. Se aplicó el restablecimiento de credenciales en Microsoft Entra ID, retirando la restricción de seguridad y validando las directivas de SSPR. Ticket cerrado dentro del SLA."
+
+
+---
+
+## 🎫 Ticket REQ-003: Exigir MFA obligatorio al área de Finanzas y políticas de acceso
+
+* **Solicitante:** Gerencia de Seguridad de la Información / Auditoría
+* **Prioridad:** Alta (SLA: 2 horas)
+* **Categoría:** Acceso Condicional (Conditional Access) - Microsoft Entra ID
+
+### 1. Descripción del Problema / Requerimiento
+Se solicita implementar una directiva de seguridad proactiva para exigir **Autenticación Multifactor (MFA) obligatoria** a todos los usuarios pertenecientes al departamento de Finanzas, estructurando planes de control de identidad y evaluando restricciones geográficas en **Microsoft Entra ID**.
+
+### 2. Procedimiento Técnico Ejecutado
+1. **Definición de Arquitectura y Tecnologías:** Se diseñó la directiva considerando las capacidades de **Acceso Condicional** y **Ubicaciones con nombre** para restringir accesos y mitigar riesgos de suplantación.
+2. **Evaluación de Entorno y Planes Preliminares:** Al operar en un entorno base de pruebas, se documentó la arquitectura corporativa haciendo uso de la sección de *Planes de directivas (versión preliminar)* para estructurar las reglas de cumplimiento.
+3. **Estrategia de Asignación por Grupos y Controles:** Se configuró el alcance de la regla aplicando restricciones de identidad por grupos de seguridad (evitando configuraciones manuales 1x1) y estableciendo en los controles de concesión la exigencia estricta de **MFA obligatorio** para proteger las aplicaciones en la nube.
+
+### 3. Verificación y Evidencias Gráficas
+* **Creación de planes de directivas y configuración de MFA en Entra ID:**
+  <img width="1920" height="1080" alt="Captura de pantalla (13)" src="https://github.com/user-attachments/assets/57faa16d-d58d-494f-8a9d-f446ee72e18f" />
+
+
+### 4. Respuesta de Cierre del Ticket
+"Estimado equipo: El requerimiento REQ-003 ha sido analizado, configurado y planeado exitosamente en el entorno de identidades mediante las herramientas de Acceso Condicional. Se establecieron las directivas de exigencia de MFA y segmentación por grupos para el departamento correspondiente bajo los estándares de seguridad corporativa. Ticket cerrado dentro del SLA."
