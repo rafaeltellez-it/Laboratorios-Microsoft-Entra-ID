@@ -21,7 +21,7 @@ Este repositorio documenta mi **laboratorio práctico empresarial (Homelab)** en
 | **INC-001** | Incorporación masiva de empleados y asignación de grupos por departamento | Usuarios / Grupos Dinámicos / CSV | Media (4 hrs) | ✅ Resuelto |
 | **INC-002** | Usuario bloqueado y habilitación de restablecimiento de contraseña (SSPR) | Password Reset / Authentication Methods | Alta (1 hr) | ✅ Resuelto |
 | **REQ-003** | Exigir MFA obligatorio al área de Finanzas y bloquear accesos fuera del país | Conditional Access / Named Locations | Alta (2 hrs) | ✅ Resuelto |
-| **INC-004** | Diagnóstico de error de inicio de sesión mediante registros de auditoría | Sign-in Logs / Troubleshooting | Crítica (30 min) | ⏳ Pendiente |
+| **INC-004** | Diagnóstico de error de inicio de sesión mediante registros de auditoría | Sign-in Logs / Troubleshooting | Crítica (30 min) | ✅ Resuelto |
 
 ---
 
@@ -106,3 +106,28 @@ Se solicita implementar una directiva de seguridad proactiva para exigir **Auten
 
 ### 4. Respuesta de Cierre del Ticket
 "Estimado equipo: El requerimiento REQ-003 ha sido analizado, configurado y planeado exitosamente en el entorno de identidades mediante las herramientas de Acceso Condicional. Se establecieron las directivas de exigencia de MFA y segmentación por grupos para el departamento correspondiente bajo los estándares de seguridad corporativa. Ticket cerrado dentro del SLA."
+
+
+---
+
+## 🎫 Ticket INC-004: Diagnóstico de error de inicio de sesión mediante registros de auditoría
+
+* **Solicitante:** Mesa de Ayuda / Seguridad TI
+* **Prioridad:** Crítica (SLA: 30 min)
+* **Categoría:** Registros de inicio de sesión y Solución de problemas - Microsoft Entra ID
+
+### 1. Descripción del Problema / Requerimiento
+Se reporta un fallo de autenticación recurrente por parte de un usuario corporativo al intentar acceder a los servicios en la nube. Se requiere realizar un diagnóstico técnico utilizando los registros de auditoría e inicio de sesión para identificar el código de error y resolver la incidencia de acceso.
+
+### 2. Procedimiento Técnico Ejecutado
+1. **Acceso a Logs de Supervisión:** Se ingresó al Portal de Azure bajo el módulo de **Microsoft Entra ID**, accediendo al apartado de *Registros de inicio de sesión* (Sign-in logs).
+2. **Filtrado y Análisis de Errores:** Se revisó la traza de actividad del usuario corporativo, identificando los estados de error y los intentos de acceso para determinar la causa raíz de los fallos de autenticación.
+3. **Validación de Soporte:** Se documentó el diagnóstico técnico para asegurar la resolución y la trazabilidad del incidente conforme a las métricas del SLA crítico.
+
+### 3. Verificación y Evidencias Gráficas
+* **Panel de Registros de inicio de sesión y diagnóstico en Entra ID:**
+  <img width="1920" height="1080" alt="Captura de pantalla (15)" src="https://github.com/user-attachments/assets/0fd6e8a9-9b87-4cc1-bdea-98676124022e" />
+
+
+### 4. Respuesta de Cierre del Ticket
+"Estimado equipo: El incidente INC-004 ha sido diagnosticado exitosamente. Se analizaron los registros de inicio de sesión en Microsoft Entra ID identificando el origen del fallo de autenticación y aplicando las directrices de soporte técnico de nivel 2. Ticket cerrado dentro del SLA crítico."
